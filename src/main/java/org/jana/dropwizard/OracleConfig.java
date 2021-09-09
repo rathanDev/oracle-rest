@@ -6,7 +6,7 @@ import io.dropwizard.db.DataSourceFactory;
 
 import java.util.Objects;
 
-public class SimpleConfig extends Configuration {
+public class OracleConfig extends Configuration {
 
     private DataSourceFactory dataSourceFactory;
 

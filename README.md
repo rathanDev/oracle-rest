@@ -4,6 +4,15 @@ git clone https://github.com/rathanDev/oracle-rest.git
 # Navigate to the base directory
 cd oracle-rest 
 
+# Build the app with maven
+mvn clean install 
+
+# Run unit tests 
+mvn test 
+
+# Check the coverage 
+Open index.html file located inside target/site/jacoco
+
 # Install docker or docker desktop 
 # Build docker image after making changes 
 docker build -t rathandev/oracle-rest .
@@ -12,7 +21,7 @@ docker build -t rathandev/oracle-rest .
 docker images
 
 # Start service
-docker run -p 8080:8080 rathandev/oracle-rest
+docker run -d -it -p 8080:8080 rathandev/oracle-rest
 
 # Check logs
-docker logs
+docker logs <id>

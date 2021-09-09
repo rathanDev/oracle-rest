@@ -15,14 +15,14 @@ import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
 import java.util.EnumSet;
 
-public class IntroApp extends Application<SimpleConfig> {
+public class OracleApp extends Application<OracleConfig> {
 
     public static void main(String[] args) throws Exception {
-        new IntroApp().run("server", "config.yml");
+        new OracleApp().run("server", "config.yml");
     }
 
     @Override
-    public void run(SimpleConfig config, Environment env) {
+    public void run(OracleConfig config, Environment env) {
 
         // Enable CORS headers
         final FilterRegistration.Dynamic cors =
@@ -42,15 +42,15 @@ public class IntroApp extends Application<SimpleConfig> {
         // env.healthChecks().register("application", new AppHealthCheck());
     }
 
-    HibernateBundle<SimpleConfig> hibernateBundle = new HibernateBundle<SimpleConfig>(TaskEntity.class) {
+    HibernateBundle<OracleConfig> hibernateBundle = new HibernateBundle<OracleConfig>(TaskEntity.class) {
         @Override
-        public PooledDataSourceFactory getDataSourceFactory(SimpleConfig config) {
+        public PooledDataSourceFactory getDataSourceFactory(OracleConfig config) {
             return config.getDataSourceFactory();
         }
     };
 
     @Override
-    public void initialize(Bootstrap<SimpleConfig> bootstrap) {
+    public void initialize(Bootstrap<OracleConfig> bootstrap) {
         bootstrap.addBundle(hibernateBundle);
     }
 

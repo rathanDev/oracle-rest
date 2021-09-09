@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jana.dropwizard</groupId>
-  <artifactId>oracle-rest</artifactId>
+  <artifactId>rest</artifactId>
   <version>1.0-SNAPSHOT</version>
   <build>
     <plugins>
@@ -19,7 +19,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>org.jana.dropwizard.IntroApp</mainClass>
+                  <mainClass>org.jana.dropwizard.OracleApp</mainClass>
                 </transformer>
               </transformers>
             </configuration>
